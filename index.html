@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>js</title>
+</head>
+<body>
+    <h2>Display Object Properties and Array Values</h2>
+    <div id="objectDisplay"></div>
+    <div id="joinedArray"></div>
+    <script>
+        const person = {
+            name: "John",
+            age: 30,
+            city: "New York"
+        };
+        const colors = ["Yellow", "Blue", "Red", "Brown", "Black"];
+            const objectDisplay = document.getElementById("objectDisplay");
+            objectDisplay.innerHTML = `
+            Name: ${person.name} <br>
+            Age: ${person.age} <br>
+            City: ${person.city}
+            <br> <br>
+        `;
+        const joinedColors = colors.join(", ");
+        const poppedColor = colors.pop(); 
+        const joinedArray = document.getElementById("joinedArray");
+        joinedArray.innerHTML = `
+            Join : ${joinedColors} <br>
+            Pop: ${poppedColor} was removed. <br>
+            Remaining : ${colors.join(", ")}
+        `;
+    </script>
+</body>
+</html>
